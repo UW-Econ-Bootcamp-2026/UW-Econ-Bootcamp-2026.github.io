@@ -1,0 +1,68 @@
+# ---------- Quarto / build ----------
+/_site/
+/.quarto/
+.DS_Store
+**/*.quarto_ipynb
+
+# ---------- LaTeX build artifacts ----------
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.nav
+*.out
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+
+# ================================================================
+# LEAK PROTECTION — keep unreleased course materials OUT of the
+# public repo. Default = hidden. Un-ignore a file the SAME week you
+# uncomment its matching line in _quarto.yml.
+# ================================================================
+
+# Never publish: LaTeX source, the archive, solutions, later-week data, figures
+*.tex
+archive/
+homeworks/solutions/
+homeworks/data/
+lectures/figs/
+
+# Lectures — hide all PDFs, then allow released weeks only
+lectures/*.pdf
+!lectures/lecture_one.pdf
+!lectures/lecture_two.pdf
+
+# Code-alongs — hide all scripts, then allow released weeks only
+codealongs/*.jl
+!codealongs/CodeAlong1.jl
+!codealongs/CodeAlong2.jl
+
+# Homeworks — hide all handouts, then allow released weeks only
+homeworks/*.pdf
+!homeworks/homework1.pdf
+
+# ---- Weekly release checklist (uncomment as each week arrives) ----
+# Week 2:
+# !lectures/lecture_three.pdf
+# !lectures/lecture_four.pdf
+# !codealongs/CodeAlong3.jl
+# !codealongs/CodeAlong4.jl
+# !homeworks/homework2.pdf
+# Week 3:
+# !lectures/lecture_five.pdf
+# !lectures/lecture_six.pdf
+# !codealongs/CodeAlong5.jl
+# !codealongs/CodeAlong6.jl
+# !homeworks/homework3.pdf
+# !homeworks/data/lwage.csv
+# Week 4:
+# !lectures/lecture_seven.pdf
+# !lectures/lecture_eight.pdf
+# !codealongs/CodeAlong7.jl
+# !codealongs/CodeAlong8_master.jl
+# !codealongs/CodeAlong8_functions.jl
+# !codealongs/CodeAlong8_structs.jl
+# !homeworks/homework4.pdf
+# !homeworks/data/data_moments.csv

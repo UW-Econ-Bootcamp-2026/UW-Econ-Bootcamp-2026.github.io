@@ -1,0 +1,100 @@
+/*-- scss:defaults --*/
+
+// UW-Madison palette
+$uw-red:      #c5050c;
+$uw-red-dark: #9b0000;
+$uw-cream:    #f7f7f2;
+$uw-gray:     #646569;
+
+$primary:       $uw-red;
+$body-color:    #1e1e1e;
+$link-color:    $uw-red-dark;
+$navbar-bg:     $uw-red;
+$navbar-fg:     #ffffff;
+
+$font-family-sans-serif: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+$font-size-root: 17px;
+$toc-font-size: 0.85rem;
+
+/*-- scss:rules --*/
+
+.navbar-title {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+// Slightly tighter, readable content column
+main.content {
+  padding-top: 1.2rem;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+h2 {
+  border-bottom: 2px solid rgba($uw-red, 0.15);
+  padding-bottom: 0.25rem;
+  margin-top: 2rem;
+}
+
+// Week / section cards used on lecture + homework pages
+.week-card {
+  border: 1px solid #e6e6e6;
+  border-left: 4px solid $uw-red;
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.1rem;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.week-card h3 {
+  margin-top: 0;
+  color: $uw-red-dark;
+}
+
+// Material link buttons (Slides / Code / etc.)
+.matlinks {
+  margin-top: 0.4rem;
+}
+.matlinks a {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.2rem 0.65rem;
+  margin: 0.15rem 0.35rem 0.15rem 0;
+  border: 1px solid rgba($uw-red, 0.4);
+  border-radius: 4px;
+  color: $uw-red-dark;
+  transition: all 0.12s ease-in-out;
+}
+.matlinks a:hover {
+  background: $uw-red;
+  color: #fff;
+  border-color: $uw-red;
+}
+
+.due {
+  font-size: 0.85rem;
+  color: $uw-gray;
+  font-style: italic;
+}
+
+// Home hero
+.hero {
+  background: linear-gradient(135deg, $uw-red 0%, $uw-red-dark 100%);
+  color: #fff;
+  padding: 2rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+.hero p { margin-bottom: 0; opacity: 0.95; }
+.hero a {
+  color: #fff;
+  text-decoration: underline;
+}
+.hero a:hover {
+  color: $uw-cream;
+}

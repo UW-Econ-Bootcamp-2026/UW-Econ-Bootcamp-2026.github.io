@@ -1,0 +1,35 @@
+---
+title: "Resources"
+description: "Helpful references for Julia and computational economics."
+toc: true
+---
+
+## Getting set up
+
+- Install [Julia](https://julialang.org/downloads/) (use the latest stable release).
+- Install a code editor — [VS Code](https://code.visualstudio.com/) with the
+  [Julia extension](https://marketplace.visualstudio.com/items?itemName=julialang.language-julia)
+  is recommended.
+- Install [Git](https://git-scm.com/) and create a [GitHub](https://github.com/)
+  account for submitting homeworks.
+
+## Julia
+
+- [Julia documentation](https://docs.julialang.org/en/v1/)
+- [Julia performance tips](https://docs.julialang.org/en/v1/manual/performance-tips/) — very helpful.
+- [QuantEcon (Julia)](https://julia.quantecon.org/) — much of this course borrows from here.
+
+## Computational economics
+
+- [Jesús Fernández-Villaverde's teaching page](https://www.sas.upenn.edu/~jesusfv/teaching.html) — lecture notes on computation and much else.
+- Dean Corbae's Computational Economics course — this bootcamp is designed to prepare you for it.
+- [Florian Oswald's teaching page](https://floswald.github.io/#teaching) (Julia and R).
+- [Gentzkow & Shapiro, *Code and Data for the Social Sciences*](https://web.stanford.edu/~gentzkow/research/CodeAndData.pdf) — best practices for coding and data.
+
+## UW-Madison
+
+- [Social Science Computing Cooperative (SSCC)](https://sscc.wisc.edu/) — computing resources for research.
+
+## Previous years
+
+- [2025 Computation Camp (John Higgins)](https://johnfhiggins.github.io/ComputationalBootcamp/)

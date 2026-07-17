@@ -1,0 +1,8 @@
+/* Small tweaks that are easier as plain CSS */
+.quarto-title-block .description {
+  font-size: 1.05rem;
+  color: #555;
+}
+table td, table th {
+  padding: 0.4rem 0.6rem;
+}

@@ -1,0 +1,185 @@
+---
+title: "Economics PhD Computational Bootcamp"
+description: "UW-Madison · Summer 2026"
+toc: true
+---
+
+::: {.hero}
+**Instructor:** John P. Ryan, [john.p.ryan@wisc.edu](mailto:john.p.ryan@wisc.edu)
+
+**Instructional Mode:** Hybrid in-person and virtual
+
+**Lectures:** Monday / Wednesday, 1:00–2:15pm
+
+**Office Hours:** Monday / Wednesday, 2:30–3:30pm
+
+**Location:** TBA (awaiting campus closures)
+:::
+
+📄 [Download the full syllabus (PDF)](syllabus.pdf)
+
+## Course Description
+
+This four-week course quickly familiarizes students with computational methods
+and emphasizes their applications to economics. By the end of the course,
+students will learn what computation is, how it applies to economics, and how to
+do it. The course will be taught in the Julia programming language. Rising
+second-year PhD students are the target audience, but all are welcome to attend.
+
+The course meets for two 75-minute lectures each week on Monday and Wednesday
+from 1:00–2:15pm. The course carries the expectation that students will work on
+course learning activities for about six hours each week outside of class.
+
+## Outcomes
+
+- Learn computational methods for structural modelling and estimation in economics.
+- Gain familiarity with dynamic programming and solution methods.
+- Understand best practices for programming, performance, and version control.
+- Obtain proficiency in the Julia programming language.
+- Get introduced to computational resources available at UW-Madison, especially the SSCC.
+
+## Homeworks and "Grading"
+
+Problem sets will be weekly and will require using Julia to execute a variety of
+tasks. The "grade" for the class is entirely based on the four problem sets,
+each of which is given equal weight.
+
+This course is entirely optional and is solely intended to help you develop your
+computational skills. The homeworks are a way of guiding your development — they
+are not meant to cause additional stress.
+
+None of the "grades" in this course will go on your transcript, none of your
+professors will see your grades, and you are free to choose whatever level of
+participation you like. All resources are posted to this website so you can
+access them at your convenience.
+
+Students are encouraged to discuss the homeworks with each other, although each
+student must write their own code and solutions. Please indicate in your
+submission who you discussed the homework with, if anyone.
+
+## AI Policy
+
+AI use (ChatGPT, Claude, etc.) is allowed but not recommended, especially initially. 
+The goal of the bootcamp is to build fluency in writing and debugging code yourself, and the early weeks
+are a clean, low-pressure environment in which to do that. You should first be able to write the code
+yourself before leaning on AI, and you must be able to understand its output. However, it is a new tool to learn
+in and of itself, and will become increasingly useful in the future. We will discuss this in the course.
+
+
+## Schedule
+
+See the [Lectures](lectures.qmd) and [Homeworks](homeworks.qmd) pages for slides,
+code-alongs, and problem sets.
+
+| Week | Topic | Lectures | Homework |
+|------|-------|----------|----------|
+| 1 | Introduction to Computation and Julia | Lectures 1–2 | HW 1 |
+| 2 | Numerical Methods | Lectures 3–4 | HW 2 |
+| 3 | Parallelization and Dynamic Programming | Lectures 5–6 | HW 3 |
+| 4 | Simulation and Applications | Lectures 7–8 | HW 4 |
+
+: Course schedule {.striped .hover}
+
+Install Julia, a code editor such as [VS Code](https://code.visualstudio.com/), and make a Github account
+before the first lecture.
+
+## Acknowledgment
+
+The structure and content of this course is due, in large part, to the
+instructors who taught the bootcamp before me: John Higgins, Kevin Hunt, and
+Garrett Anstreicher.
+
+## Misconduct Statement
+
+Academic Integrity is critical to maintaining fair and knowledge-based learning
+at UW Madison. Academic dishonesty is a serious violation: it undermines the
+bonds of trust and honesty between members of our academic community, degrades
+the value of your degree and defrauds those who may eventually depend upon your
+knowledge and integrity.
+
+Examples of academic misconduct include, but are not limited to: cheating on an
+examination (copying from another student's paper, referring to materials on
+the exam other than those explicitly permitted, continuing to work on an exam
+after the time has expired, turning in an exam for regrading after making
+changes to the exam), copying the Homework of someone else, submitting for
+credit work done by someone else, stealing examinations or course materials,
+tampering with the grade records or with another student's work, or knowingly
+and intentionally assisting another student in any of the above. Students are
+reminded that online sources, including anonymous or unattributed ones like
+Wikipedia, still need to be cited like any other source; and copying from any
+source without attribution is considered plagiarism.
+
+The Department of Economics will deal with the offenses harshly following
+UWS14 procedures:
+
+1. The penalty for misconduct in most cases will be removal from the course
+   and a failing grade.
+2. The department will inform the Dean of Students as required and additional
+   sanctions maybe applied.
+3. The department will keep an internal record of misconduct incidents. This
+   information will be made available to teaching faculty writing
+   recommendation letters and to admission offices of the School of Business
+   and Engineering.
+
+If you think you see incidents of misconduct, you should tell your instructor
+about them, in which case they will take appropriate action and protect your
+identity. You could also choose to contact our a department administrator and
+your identity will be kept confidential.
+
+## Grievance Procedure
+
+The Department of Economics has developed a grievance procedure through which
+you may register comments or complaints about a course, an instructor, or a
+teaching assistant. The Department continues to provide a course evaluation
+each semester in every class. If you wish to make anonymous complaints to an
+instructor or teaching assistant, the appropriate vehicle is the course
+evaluation.
+
+If you have a disagreement with an instructor or a teaching assistant, we
+strongly encourage you to try to resolve the dispute with him or her directly.
+The grievance procedure is designed for situations where neither of these
+channels is appropriate.
+
+If you wish to file a grievance, you should go to room 7238 Social Science and
+request a Course Comment Sheet. When completing the comment sheet, you will
+need to provide a detailed statement that describes what aspects of the course
+you find unsatisfactory. You will need to sign the sheet and provide your
+student identification number, your address, and a phone where you can be
+reached. The Department plans to investigate comments fully and will respond
+in writing to complaints.
+
+Your name, address, phone number, and student ID number will not be revealed
+to the instructor or teaching assistant involved and will be treated as
+confidential. The Department needs this information, because it may become
+necessary for a commenting student to have a meeting with the department chair
+or a nominee to gather additional information. A name and address are
+necessary for providing a written response.
+
+## Accommodations for Students with Disabilities
+
+The University of Wisconsin-Madison supports the right of all enrolled students
+to a full and equal educational opportunity. The Americans with Disabilities Act
+(ADA), Wisconsin State Statute (36.12), and UW-Madison policy (Faculty Document
+1071) require that students with disabilities be reasonably accommodated in
+instruction and campus life. Reasonable accommodations for students with
+disabilities is a shared faculty and student responsibility. Students are
+expected to inform faculty [me] of their need for instructional accommodations
+by the end of the third week of the semester, or as soon as possible after a
+disability has been incurred or recognized. Faculty [I], will work either
+directly with the student [you] or in coordination with the McBurney Center to
+identify and provide reasonable instructional accommodations. Disability
+information, including instructional accommodations as part of a student's
+educational record, is confidential and protected under FERPA.
+
+## Diversity and Inclusion
+
+Diversity is a source of strength, creativity, and innovation for UW-Madison.
+We value the contributions of each person and respect the profound ways their
+identity, culture, background, experience, status, abilities, and opinion
+enrich the university community. We commit ourselves to the pursuit of
+excellence in teaching, research, outreach, and diversity as inextricably
+linked goals.
+
+The University of Wisconsin-Madison fulfills its public mission by creating a
+welcoming and inclusive community for people from every background — people
+who as students, faculty, and staff serve Wisconsin and the world.

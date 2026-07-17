@@ -1,0 +1,92 @@
+---
+title: "Homeworks"
+description: "Problem sets, starter code, and data."
+toc: true
+---
+
+There are four problem sets. Homework 1 is due
+Wednesday, August 5, and each subsequent homework is due one week later.
+
+Each assignment is distributed and submitted through **Classroom 50**: click the
+assignment invite link, which creates your personal repository
+from the template. Clone it, work locally, then `git push` to submit. Run
+`] activate .` then `instantiate` inside the repo once to set up the Julia
+environment.
+
+Solutions are released after each homework's due date.
+
+## Homework 1
+
+::: {.week-card}
+### HW 1 · Introduction to Julia
+[Due: Wednesday, August 5]{.due}
+
+::: {.matlinks}
+[Problem set (PDF)](homeworks/homework1.pdf){target="_blank"}
+[Solution: released after due date]{.due}
+:::
+:::
+
+<!-- WEEK 2 -- uncomment to release Homework 2
+## Homework 2
+
+::: {.week-card}
+### HW 2 · Numerical Methods
+[Due: Wednesday, August 12]{.due}
+
+::: {.matlinks}
+[Problem set (PDF)](homeworks/homework2.pdf){target="_blank"}
+[Solution: released after due date]{.due}
+:::
+:::
+-->
+
+<!-- WEEK 3 -- uncomment to release Homework 3
+## Homework 3
+
+::: {.week-card}
+### HW 3 · Parallelization and Dynamic Programming
+[Due: Wednesday, August 19]{.due}
+
+::: {.matlinks}
+[Problem set (PDF)](homeworks/homework3.pdf){target="_blank"}
+[Solution: released after due date]{.due}
+:::
+:::
+-->
+
+<!-- WEEK 4 -- uncomment to release Homework 4
+## Homework 4
+
+::: {.week-card}
+### HW 4 · Simulation and Applications
+[Due: Wednesday, August 26]{.due}
+
+::: {.matlinks}
+[Problem set (PDF)](homeworks/homework4.pdf){target="_blank"}
+[Solution: released after due date]{.due}
+:::
+:::
+-->
+
+## Starter code and data
+
+Each assignment's starter code, data, and `Project.toml` ship inside its
+Classroom 50 template repository. Copies of the shared files are also here for
+reference:
+
+::: {.matlinks}
+[slow_growth.jl](homeworks/starter_code/slow_growth.jl)
+:::
+
+<!-- WEEK 3 -- uncomment to release lwage.csv (used in Homework 3)
+::: {.matlinks}
+[lwage.csv](homeworks/data/lwage.csv)
+:::
+-->
+
+<!-- WEEK 4 -- uncomment to release data_moments.csv (used in Homework 4)
+::: {.matlinks}
+[data_moments.csv](homeworks/data/data_moments.csv)
+:::
+-->

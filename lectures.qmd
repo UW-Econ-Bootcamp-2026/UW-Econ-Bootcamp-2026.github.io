@@ -1,0 +1,88 @@
+---
+title: "Lectures"
+description: "Slides and code-alongs for each lecture."
+toc: true
+---
+
+Each lecture has a set of slides and an accompanying code-along file you can run
+in Julia. Download the `.jl` files and follow along during class.
+
+## Week 1 — Introduction to Computation and Julia
+
+::: {.week-card}
+### Lecture 1 · Intro to Computation, Basic Julia, and Version Control
+::: {.matlinks}
+[Slides (PDF)](lectures/lecture_one.pdf){target="_blank"}
+[Code-along](codealongs/CodeAlong1.jl)
+:::
+:::
+
+::: {.week-card}
+### Lecture 2 · Performance Optimization and Advanced Julia
+::: {.matlinks}
+[Slides (PDF)](lectures/lecture_two.pdf){target="_blank"}
+[Code-along](codealongs/CodeAlong2.jl)
+:::
+:::
+
+<!-- WEEK 2 -- uncomment to release
+## Week 2 — Numerical Methods
+
+::: {.week-card}
+### Lecture 3 · Numerical Optimization, Root Finding, and Fixed Points
+::: {.matlinks}
+[Slides (PDF)](lectures/lecture_three.pdf){target="_blank"}
+[Code-along](codealongs/CodeAlong3.jl)
+:::
+:::
+
+::: {.week-card}
+### Lecture 4 · Interpolation and Integration
+::: {.matlinks}
+[Slides (PDF)](lectures/lecture_four.pdf){target="_blank"}
+[Code-along](codealongs/CodeAlong4.jl)
+:::
+:::
+-->
+
+<!-- WEEK 3 -- uncomment to release
+## Week 3 — Parallelization and Dynamic Programming
+
+::: {.week-card}
+### Lecture 5 · Parallelization and UW Resources
+::: {.matlinks}
+[Slides (PDF)](lectures/lecture_five.pdf){target="_blank"}
+[Code-along](codealongs/CodeAlong5.jl)
+:::
+:::
+
+::: {.week-card}
+### Lecture 6 · Dynamic Programming and Value Function Iteration
+::: {.matlinks}
+[Slides (PDF)](lectures/lecture_six.pdf){target="_blank"}
+[Code-along](codealongs/CodeAlong6.jl)
+:::
+:::
+-->
+
+<!-- WEEK 4 -- uncomment to release
+## Week 4 — Simulation and Applications
+
+::: {.week-card}
+### Lecture 7 · Simulation, AI Tools, and Best Practices
+::: {.matlinks}
+[Slides (PDF)](lectures/lecture_seven.pdf){target="_blank"}
+[Code-along](codealongs/CodeAlong7.jl)
+:::
+:::
+
+::: {.week-card}
+### Lecture 8 · Economic Applications
+::: {.matlinks}
+[Slides (PDF)](lectures/lecture_eight.pdf){target="_blank"}
+[master.jl](codealongs/CodeAlong8_master.jl)
+[functions.jl](codealongs/CodeAlong8_functions.jl)
+[structs.jl](codealongs/CodeAlong8_structs.jl)
+:::
+:::
+-->

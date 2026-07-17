@@ -1,0 +1,84 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "index.qmd"
+    - "lectures.qmd"
+    - "homeworks.qmd"
+    - "codealongs.qmd"
+    - "resources.qmd"
+  # NOTE: listed explicitly (not as *.pdf / *.jl globs) so that files for
+  # weeks not yet released aren't copied into _site and publicly deployed,
+  # even though they aren't linked from any page. Uncomment a line the same
+  # week you uncomment its link in lectures.qmd / homeworks.qmd / codealongs.qmd.
+  resources:
+    - "lectures/lecture_one.pdf"
+    - "lectures/lecture_two.pdf"
+    # - "lectures/lecture_three.pdf"   # Week 2
+    # - "lectures/lecture_four.pdf"    # Week 2
+    # - "lectures/lecture_five.pdf"    # Week 3
+    # - "lectures/lecture_six.pdf"     # Week 3
+    # - "lectures/lecture_seven.pdf"   # Week 4
+    # - "lectures/lecture_eight.pdf"   # Week 4
+    - "codealongs/CodeAlong1.jl"
+    - "codealongs/CodeAlong2.jl"
+    # - "codealongs/CodeAlong3.jl"            # Week 2
+    # - "codealongs/CodeAlong4.jl"            # Week 2
+    # - "codealongs/CodeAlong5.jl"            # Week 3
+    # - "codealongs/CodeAlong6.jl"            # Week 3
+    # - "codealongs/CodeAlong7.jl"            # Week 4
+    # - "codealongs/CodeAlong8_master.jl"     # Week 4
+    # - "codealongs/CodeAlong8_functions.jl"  # Week 4
+    # - "codealongs/CodeAlong8_structs.jl"    # Week 4
+    - "homeworks/homework1.pdf"
+    # - "homeworks/homework2.pdf"   # Week 2
+    # - "homeworks/homework3.pdf"   # Week 3
+    # - "homeworks/homework4.pdf"   # Week 4
+    - "homeworks/starter_code/slow_growth.jl"
+    # - "homeworks/data/lwage.csv"         # Week 3 (Homework 3)
+    # - "homeworks/data/data_moments.csv"  # Week 4 (Homework 4)
+    - "syllabus.pdf"
+
+website:
+  title: "Ph.D. Computation Camp"
+  description: "UW-Madison Computational Bootcamp for PhD Economics students."
+  site-url: "https://jpryan7.github.io/UW_Econ_Bootcamp_26/"
+  page-navigation: true
+  reader-mode: true
+  navbar:
+    background: primary
+    search: true
+    left:
+      - text: "Syllabus"
+        href: index.qmd
+      - text: "Lectures"
+        href: lectures.qmd
+      - text: "Homeworks"
+        href: homeworks.qmd
+      - text: "Code-Alongs"
+        href: codealongs.qmd
+      - text: "Resources"
+        href: resources.qmd
+    right:
+      - icon: github
+        href: https://github.com/jpryan7/UW_Econ_Bootcamp_26
+        aria-label: GitHub
+  page-footer:
+    left: "UW-Madison Computation Camp · Summer 2026"
+    right: "Built with [Quarto](https://quarto.org)"
+
+format:
+  html:
+    theme:
+      - cosmo
+      - styles.scss
+    toc: true
+    toc-depth: 3
+    toc-title: "On this page"
+    css: extra.css
+    code-copy: true
+    code-overflow: wrap
+    link-external-newwindow: true
+    smooth-scroll: true
+    grid:
+      content-mode: standard
