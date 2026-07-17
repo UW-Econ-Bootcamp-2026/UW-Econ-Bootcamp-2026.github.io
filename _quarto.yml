@@ -42,7 +42,7 @@ project:
 website:
   title: "Ph.D. Computation Camp"
   description: "UW-Madison Computational Bootcamp for PhD Economics students."
-  site-url: "https://jpryan7.github.io/UW_Econ_Bootcamp_26/"
+  site-url: "https://uw-econ-bootcamp-2026.github.io/"
   page-navigation: true
   reader-mode: true
   navbar:
@@ -61,7 +61,7 @@ website:
         href: resources.qmd
     right:
       - icon: github
-        href: https://github.com/jpryan7/UW_Econ_Bootcamp_26
+        href: https://github.com/UW-Econ-Bootcamp-2026/UW-Econ-Bootcamp-2026.github.io
         aria-label: GitHub
   page-footer:
     left: "UW-Madison Computation Camp · Summer 2026"
