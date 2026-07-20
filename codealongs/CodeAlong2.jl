@@ -388,7 +388,6 @@ end
 
 ### Solve model
 function solve_model(para, sols)
-    para, sols = build_structs();    
     # destructure the fields we need (built-in Julia syntax; replaces Parameters.jl's @unpack)
     (; β, δ, α, k_grid, N_k, tol) = para
     (; V, kp) = sols
