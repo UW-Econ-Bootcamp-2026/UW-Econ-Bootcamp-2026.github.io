@@ -395,7 +395,8 @@ end
 ########################################################################
 
 # Git is a program that tracks the history of your code. GitHub is a website
-# that hosts git repositories. You will submit homework via Classroom 50.
+# that hosts git repositories. You submit homework by pushing to your own
+# private repository in the course GitHub organization.
 
 # One-time setup (in a terminal, not the Julia REPL):
 #   git config --global user.name "Your Name"
@@ -410,7 +411,7 @@ end
 #   git pull              -> download your collaborators' snapshots
 
 # Try it now:
-# 1. Accept the Homework 1 invite link on Classroom 50 (creates your repository)
+# 1. Accept the emailed GitHub invite to your hw1-<username> repository
 # 2. Clone it: git clone <your-repo-url>
 # 3. Create a file, then: git add . ; git commit -m "First commit" ; git push
 # 4. Refresh the repository page on GitHub - your file is there

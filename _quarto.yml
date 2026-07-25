@@ -5,6 +5,7 @@ project:
     - "index.qmd"
     - "lectures.qmd"
     - "homeworks.qmd"
+    - "submitting.qmd"
     - "codealongs.qmd"
     - "resources.qmd"
   # NOTE: listed explicitly (not as *.pdf / *.jl globs) so that files for
@@ -54,7 +55,11 @@ website:
       - text: "Lectures"
         href: lectures.qmd
       - text: "Homeworks"
-        href: homeworks.qmd
+        menu:
+          - text: "Assignments"
+            href: homeworks.qmd
+          - text: "How to Submit"
+            href: submitting.qmd
       - text: "Code-Alongs"
         href: codealongs.qmd
       - text: "Resources"

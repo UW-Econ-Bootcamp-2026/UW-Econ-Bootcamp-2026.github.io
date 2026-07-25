@@ -4,16 +4,13 @@ description: "Problem sets, starter code, and data."
 toc: true
 ---
 
-There are four problem sets. Homework 1 is due
-Wednesday, August 5, and each subsequent homework is due one week later.
+There are four problem sets. Homework 1 is due Wednesday, August 5, and each
+subsequent homework is due one week later. Solutions are released after each
+homework's due date.
 
-Each assignment is distributed and submitted through **Classroom 50**: click the
-assignment invite link, which creates your personal repository
-from the template. Clone it, work locally, then `git push` to submit. Run
-`] activate .` then `instantiate` inside the repo once to set up the Julia
-environment.
-
-Solutions are released after each homework's due date.
+Homeworks are submitted by pushing to your personal GitHub repository. See
+[Submitting Homework](submitting.qmd) to register your GitHub username
+and submission instructions.
 
 ## Homework 1
 
@@ -71,8 +68,8 @@ Solutions are released after each homework's due date.
 
 ## Starter code and data
 
-Each assignment's starter code, data, and `Project.toml` ship inside its
-Classroom 50 template repository. Copies of the shared files are also here for
+Each assignment's starter code, data, and `Project.toml` ship inside your
+personal homework repository. Copies of the shared files are also here for
 reference:
 
 ::: {.matlinks}

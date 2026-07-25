@@ -1,0 +1,85 @@
+---
+title: "Submitting Homework"
+description: "How to register your GitHub username, submit assignments, and get feedback."
+toc: true
+---
+
+Assignments are distributed and collected through **GitHub**. For each homework
+you get your own **private repository** in the course organization, and
+**pushing to that repository is how you submit**. There is no separate submit
+step and no upload form.
+
+## Register your GitHub username (once)
+
+Everything below depends on us knowing your GitHub handle, so do this first.
+
+1. If you don't already have a GitHub account, create one at
+   [github.com/join](https://github.com/join).
+2. Submit your name, email, and GitHub **username** in the form below. Your
+   username is the part after `github.com/` when you visit your own profile,
+   not your display name.
+
+```{=html}
+<iframe
+  src="https://docs.google.com/forms/d/e/1FAIpQLSfoUbJhmLsPYe0lrbeEAwM7-JiXFJLLiE9sZTwLyrx7pAIiaA/viewform?embedded=true"
+  width="100%" height="720" frameborder="0" marginheight="0" marginwidth="0"
+  style="border:0;max-width:720px;"
+  title="GitHub username registration form">
+  Loading…
+</iframe>
+```
+
+If the form doesn't load, [open it in a new tab](https://docs.google.com/forms/d/e/1FAIpQLSfoUbJhmLsPYe0lrbeEAwM7-JiXFJLLiE9sZTwLyrx7pAIiaA/viewform){target="_blank"}.
+
+## How to submit a homework
+
+1. **Accept your repository invite.** When a homework is released, we create a
+   private repo named `hwN-<your-github-username>` in the course organization
+   and add you to it. GitHub emails you an invitation (it also appears at
+   [github.com/notifications](https://github.com/notifications)). Make sure to **accept it**,
+   or you won't be able to push. Invites expire after 7 days; email me if yours lapses.
+2. **Clone your repo and set up the Julia environment:**
+   ```bash
+   git clone https://github.com/uw-econ-bootcamp-2026/hwN-<your-github-username>.git
+   cd hwN-<your-github-username>
+   ```
+   ```julia
+   julia> ]              # enter package mode
+   (@v1) pkg> activate .
+   (HomeworkN) pkg> instantiate
+   ```
+3. **Write your answers in `homeworkN.jl`.** How you organize the file is up to
+   you, but keep the exact function names and signatures the prompt
+   specifies — they are listed in the PDF and in your repo's `README.md`.
+4. **Run the local smoke tests before you push:**
+   ```bash
+   julia --project=. test/runtests.jl
+   ```
+   These check that your functions exist with the right names and arities; they
+   do not check whether your answers are correct. They catch the single most
+   common way an otherwise-correct assignment loses points.
+5. **Push to submit:**
+   ```bash
+   git add -A
+   git commit -m "Submit homework N"
+   git push
+   ```
+   Your latest pushed commit is what gets graded.
+
+## How you get feedback
+
+Grading scripts run periodically. Each run
+pulls the latest commit from your repo, runs a test suite against your
+functions, and posts your report back to your repo as a GitHub issue titled
+*"Autograder feedback: HWN"* — GitHub emails you when it appears.
+
+If a report looks wrong, it usually points at something concrete:
+
+- **`UndefVarError: <name> not defined`** — a function is named differently from
+  what the prompt requires. Rename it to fix.
+- **"could not be loaded"** — `homeworkN.jl` has a syntax error, or a `using`
+  for a package that isn't in `Project.toml`.
+- **"did not finish"** — an infinite loop, or slow top-level code that runs on
+  load. 
+
+Email me if you're stuck on any of these.
