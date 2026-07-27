@@ -64,16 +64,23 @@ If the form doesn't load, [open it in a new tab](https://docs.google.com/forms/d
    git commit -m "Submit homework N"
    git push
    ```
-   Your latest pushed commit is what gets graded.
+   Your latest pushed commit is what gets graded. You can push as many times as
+   you like before the due date; due dates for every assignment are listed on the
+   [Homeworks](homeworks.qmd) page.
 
 ## How you get feedback
 
 Grading scripts run periodically. Each run
 pulls the latest commit from your repo, runs a test suite against your
-functions, and posts your report back to your repo as a GitHub issue titled
-*"Autograder feedback: HWN"* — GitHub emails you when it appears.
+functions, and posts a report back to your repo as a GitHub issue titled
+*"Homework N — feedback"* — GitHub emails you when it appears.
 
-If a report looks wrong, it usually points at something concrete:
+**Those automated checks are a first pass, not your grade.** A report labelled
+*provisional* tells you what the machine could and couldn't verify; use it to
+catch problems before the deadline. I read every submission myself and post your
+actual grade, with comments, in the same issue thread.
+
+If a provisional report looks wrong, it usually points at something concrete:
 
 - **`UndefVarError: <name> not defined`** — a function is named differently from
   what the prompt requires. Rename it to fix.

@@ -7,6 +7,8 @@ toc: true
 Each lecture has a set of slides and an accompanying code-along file you can run
 in Julia. Download the `.jl` files and follow along during class.
 
+🎥 [Join the lecture on Zoom](https://uwmadison.zoom.us/j/93094365786){target="_blank"}
+
 ## Week 1 — Introduction to Computation and Julia
 
 ::: {.week-card}
@@ -14,6 +16,7 @@ in Julia. Download the `.jl` files and follow along during class.
 ::: {.matlinks}
 [Slides (PDF)](lectures/lecture_one.pdf){target="_blank"}
 [Code-along](codealongs/CodeAlong1.jl)
+<!-- [Recording](https://...) -->
 :::
 :::
 
@@ -22,6 +25,7 @@ in Julia. Download the `.jl` files and follow along during class.
 ::: {.matlinks}
 [Slides (PDF)](lectures/lecture_two.pdf){target="_blank"}
 [Code-along](codealongs/CodeAlong2.jl)
+<!-- [Recording](https://...) -->
 :::
 :::
 
@@ -33,6 +37,7 @@ in Julia. Download the `.jl` files and follow along during class.
 ::: {.matlinks}
 [Slides (PDF)](lectures/lecture_three.pdf){target="_blank"}
 [Code-along](codealongs/CodeAlong3.jl)
+*Recording: link TBD*
 :::
 :::
 
@@ -41,6 +46,7 @@ in Julia. Download the `.jl` files and follow along during class.
 ::: {.matlinks}
 [Slides (PDF)](lectures/lecture_four.pdf){target="_blank"}
 [Code-along](codealongs/CodeAlong4.jl)
+*Recording: link TBD*
 :::
 :::
 -->
@@ -53,6 +59,7 @@ in Julia. Download the `.jl` files and follow along during class.
 ::: {.matlinks}
 [Slides (PDF)](lectures/lecture_five.pdf){target="_blank"}
 [Code-along](codealongs/CodeAlong5.jl)
+*Recording: link TBD*
 :::
 :::
 
@@ -61,6 +68,7 @@ in Julia. Download the `.jl` files and follow along during class.
 ::: {.matlinks}
 [Slides (PDF)](lectures/lecture_six.pdf){target="_blank"}
 [Code-along](codealongs/CodeAlong6.jl)
+*Recording: link TBD*
 :::
 :::
 -->
@@ -73,6 +81,7 @@ in Julia. Download the `.jl` files and follow along during class.
 ::: {.matlinks}
 [Slides (PDF)](lectures/lecture_seven.pdf){target="_blank"}
 [Code-along](codealongs/CodeAlong7.jl)
+*Recording: link TBD*
 :::
 :::
 
@@ -83,6 +92,7 @@ in Julia. Download the `.jl` files and follow along during class.
 [master.jl](codealongs/CodeAlong8_master.jl)
 [functions.jl](codealongs/CodeAlong8_functions.jl)
 [structs.jl](codealongs/CodeAlong8_structs.jl)
+*Recording: link TBD*
 :::
 :::
 -->
