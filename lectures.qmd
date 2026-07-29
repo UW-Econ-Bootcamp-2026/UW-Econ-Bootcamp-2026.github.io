@@ -26,7 +26,8 @@ in Julia. Download the `.jl` files and follow along during class.
 ::: {.matlinks}
 [Slides (PDF)](lectures/lecture_two.pdf){target="_blank"}
 [Code-along](codealongs/CodeAlong2.jl)
-<!-- [Recording](https://...) -->
+[Recording](https://uwmadison.zoom.us/rec/share/ryFPqOlDzemfgw2XpYJxQ3Q5PhjX50-Js4wqbS5HOlLzJCyu2c8RzzB3Lt3P4Sit.mEfms_e8D7kFJ1Kb){target="_blank"}
+(Passcode: `U5MOP0%M`)
 :::
 :::
 
