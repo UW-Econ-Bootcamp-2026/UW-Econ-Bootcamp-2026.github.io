@@ -345,11 +345,11 @@ function bellman(para, sols)
     # unpack all: (; β, δ, α, k_grid, N_k, tol, max_iter) = para
 
     (; β, δ, α, k_grid, N_k) = para # just unpack the fields we need
-    (; V) = sols
+    (; V, kp) = sols
 
     #note: when creating new arrays of zeros, it is good to declare the type! This way Julia doesn't have to figure it out later
     V_next = zeros(Float64, N_k) 
-    kp_next = zeros_like(kp) # better: let Julia do it
+    kp_next = zero(kp) # better: let Julia do it
 
     for (i_k, k) in enumerate(k_grid)
         max_util = -1e10
@@ -384,17 +384,18 @@ end
 function solve_model(para, sols)
     # destructure the fields we need (built-in Julia syntax; replaces Parameters.jl's @unpack)
     (; tol, max_iter) = para
-    (; V) = sols
+    (; V, kp) = sols
 
-    V_next = zeros_like(V)
+    V_next = zero(V)
+    kp_next = zero(kp)
     max_diff = tol * 100.0
     n = 0
-    while max_diff > tol
+    while max_diff > tol && n < max_iter
         n +=1
         V_next, kp_next = bellman(para,sols)
         
         max_diff = maximum(abs.(V_next - V))
-        sols.V .= V_next
+        sols.V .= V_next # can do in-place assignment to update fields of struct, but not new assignment
         sols.kp .= kp_next
 
         @show n, max_diff
@@ -408,7 +409,6 @@ end
 para, sols = initialize();
 
 @time sols = solve_model(para,sols)
- 
 
 using Plots
 plot(para.k_grid, sols.V)
