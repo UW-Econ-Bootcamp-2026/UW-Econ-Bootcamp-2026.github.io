@@ -381,7 +381,7 @@ end
 
 
 ### Solve model
-function solve_model(para, sols)
+function solve_model!(para, sols)
     # destructure the fields we need (built-in Julia syntax; replaces Parameters.jl's @unpack)
     (; tol, max_iter) = para
     (; V, kp) = sols
@@ -402,13 +402,11 @@ function solve_model(para, sols)
 
     end
 
-    sols
-
 end
 
 para, sols = initialize();
 
-@time sols = solve_model(para,sols)
+@time solve_model!(para,sols)
 
 using Plots
 plot(para.k_grid, sols.V)
