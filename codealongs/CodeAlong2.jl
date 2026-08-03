@@ -315,7 +315,8 @@ using BenchmarkTools
     k_grid::Vector{Float64}=collect(range(0.1, length = 1800, stop = 45.0))   
     N_k::Int64 = length(k_grid)
 
-    tol::Float64 = 10^-4
+    tol::Float64 = 10^-5
+    max_iter::Int64 = 10^4
 
 end
 
@@ -327,45 +328,38 @@ struct ModelSolutions
 
 end 
 
-function build_ModelSolutions(para)
+function initialize()
+    para = ModelParameters()
 
     V = zeros(Float64,para.N_k)
     kp = zeros(Float64,para.N_k)
 
-    sols = ModelSolutions(V,kp)
-
-    return sols
-
-end
-
-function build_structs()
-
-    para = ModelParameters()
-    sols = build_ModelSolutions(para)
+    sols = ModelSolutions(V, kp)
 
     return para, sols
-
 end
 
 ### Bellman operator
 function bellman(para, sols)
     # destructure the fields we need (built-in Julia syntax; replaces Parameters.jl's @unpack)
-    (; β, δ, α, k_grid, N_k, tol) = para
-    (; V, kp) = sols
+    # unpack all: (; β, δ, α, k_grid, N_k, tol, max_iter) = para
+
+    (; β, δ, α, k_grid, N_k) = para # just unpack the fields we need
+    (; V) = sols
 
     #note: when creating new arrays of zeros, it is good to declare the type! This way Julia doesn't have to figure it out later
-    V_next = zeros(Float64,para.N_k)
-    kp_next = zeros(Float64,N_k)
+    V_next = zeros(Float64, N_k) 
+    kp_next = zeros_like(kp) # better: let Julia do it
 
-    for i_k = eachindex(k_grid)
+    for (i_k, k) in enumerate(k_grid)
         max_util = -1e10
         k = k_grid[i_k]
         budget = k^α + (1-δ)*k
-        for i_kp = eachindex(k_grid)
+        for (i_kp, kp) in enumerate(k_grid)
             
-            c = budget - k_grid[i_kp]
+            c = budget - kp
 
-            if c > 0
+            if c > 0 # check feasibility
                 
                 V_temp = log(c) + β*V[i_kp]
             
@@ -389,11 +383,11 @@ end
 ### Solve model
 function solve_model(para, sols)
     # destructure the fields we need (built-in Julia syntax; replaces Parameters.jl's @unpack)
-    (; β, δ, α, k_grid, N_k, tol) = para
-    (; V, kp) = sols
+    (; tol, max_iter) = para
+    (; V) = sols
 
-    V_next = zeros(Float64,N_k)
-    max_diff = tol + 10.0
+    V_next = zeros_like(V)
+    max_diff = tol * 100.0
     n = 0
     while max_diff > tol
         n +=1
@@ -411,7 +405,7 @@ function solve_model(para, sols)
 
 end
 
-para, sols = build_structs();
+para, sols = initialize();
 
 @time sols = solve_model(para,sols)
  

@@ -15,16 +15,16 @@ project:
   resources:
     - "lectures/lecture_one.pdf"
     - "lectures/lecture_two.pdf"
-    # - "lectures/lecture_three.pdf"   # Week 2
-    # - "lectures/lecture_four.pdf"    # Week 2
+    - "lectures/lecture_three.pdf"   # Week 2
+    - "lectures/lecture_four.pdf"    # Week 2
     # - "lectures/lecture_five.pdf"    # Week 3
     # - "lectures/lecture_six.pdf"     # Week 3
     # - "lectures/lecture_seven.pdf"   # Week 4
     # - "lectures/lecture_eight.pdf"   # Week 4
     - "codealongs/CodeAlong1.jl"
     - "codealongs/CodeAlong2.jl"
-    # - "codealongs/CodeAlong3.jl"            # Week 2
-    # - "codealongs/CodeAlong4.jl"            # Week 2
+    - "codealongs/CodeAlong3.jl"            # Week 2
+    - "codealongs/CodeAlong4.jl"            # Week 2
     # - "codealongs/CodeAlong5.jl"            # Week 3
     # - "codealongs/CodeAlong6.jl"            # Week 3
     # - "codealongs/CodeAlong7.jl"            # Week 4

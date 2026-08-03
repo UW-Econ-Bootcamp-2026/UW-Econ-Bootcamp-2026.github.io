@@ -11,12 +11,12 @@ open it in VS Code (or your editor of choice), and run it alongside the lecture.
 |---------|-------|------|
 | 1 | Intro to Computation and Basic Julia | [CodeAlong1.jl](codealongs/CodeAlong1.jl) |
 | 2 | Performance Optimization and Advanced Julia | [CodeAlong2.jl](codealongs/CodeAlong2.jl) |
+| 3 | Numerical Optimization and Root Finding | [CodeAlong3.jl](codealongs/CodeAlong3.jl) |
+| 4 | Interpolation and Integration | [CodeAlong4.jl](codealongs/CodeAlong4.jl) |
 
 : Code-along files {.striped .hover}
 
 <!-- WEEKS 2-4 -- uncomment rows and move them back into the table above as each week releases
-| 3 | Numerical Optimization and Root Finding | [CodeAlong3.jl](codealongs/CodeAlong3.jl) |
-| 4 | Interpolation and Integration | [CodeAlong4.jl](codealongs/CodeAlong4.jl) |
 | 5 | Parallelization and UW Resources | [CodeAlong5.jl](codealongs/CodeAlong5.jl) |
 | 6 | Dynamic Programming | [CodeAlong6.jl](codealongs/CodeAlong6.jl) |
 | 7 | Simulation and Best Practices | [CodeAlong7.jl](codealongs/CodeAlong7.jl) |

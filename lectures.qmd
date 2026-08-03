@@ -31,7 +31,6 @@ in Julia. Download the `.jl` files and follow along during class.
 :::
 :::
 
-<!-- WEEK 2 -- uncomment to release
 ## Week 2 — Numerical Methods
 
 ::: {.week-card}
@@ -51,7 +50,6 @@ in Julia. Download the `.jl` files and follow along during class.
 *Recording: link TBD*
 :::
 :::
--->
 
 <!-- WEEK 3 -- uncomment to release
 ## Week 3 — Parallelization and Dynamic Programming

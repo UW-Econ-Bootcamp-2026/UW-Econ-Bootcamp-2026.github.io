@@ -45,10 +45,10 @@ homeworks/*.pdf
 
 # ---- Weekly release checklist (uncomment as each week arrives) ----
 # Week 2:
-# !lectures/lecture_three.pdf
-# !lectures/lecture_four.pdf
-# !codealongs/CodeAlong3.jl
-# !codealongs/CodeAlong4.jl
+!lectures/lecture_three.pdf
+!lectures/lecture_four.pdf
+!codealongs/CodeAlong3.jl
+!codealongs/CodeAlong4.jl
 # !homeworks/homework2.pdf
 # Week 3:
 # !lectures/lecture_five.pdf
