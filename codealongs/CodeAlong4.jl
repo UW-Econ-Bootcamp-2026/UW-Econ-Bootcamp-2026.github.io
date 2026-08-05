@@ -58,15 +58,17 @@ scatter!(x, y, markersize = 4)
 #Linear Interpolation
 interp_y = linear_interpolation(x, y)
 y_fine_interp = interp_y.(x_fine)
-plot(x_fine, [y_fine, y_fine_interp])
-scatter!(x, y, markersize = 4)
+plot!(x_fine, y_fine_interp)
 
+# put the points where there is the most curvature
 x2=[0.1,0.5,1.0,1.5,2.0,5.0,10.1]
 y2 = log.(x2)
 interp_y2 = linear_interpolation(x2,y2)
 y_interp = interp_y2.(x_fine)
 plot(x_fine, [y_fine, interp_y2.(x_fine)])
-##Extrapolation
+scatter!(x2, y2, markersize = 4)
+
+#Extrapolation
 log(11)
 interp_y(11) #This will give you an error because we haven't allowed for extrapolation
 
@@ -76,6 +78,7 @@ interp_y(11) #This will give you an error because we haven't allowed for extrapo
 interp_y_extra = linear_interpolation(x,y,extrapolation_bc = Line()) #Flat()
 interp_y_extra(11)
 
+# add a point far out
 x2=[0.1,0.5,1.0,1.5,2.0,5.0,10.1,19.0]
 y2 = log.(x2)
 interp_y2 = linear_interpolation(x2,y2)
@@ -83,6 +86,7 @@ y_interp = interp_y2.(x_fine)
 x_fine_2  = collect(0.1:0.1:20.1)
 y_fine_2 = log.(x_fine_2)
 plot(x_fine_2, y_fine_2)
+scatter!(x2, y2, markersize = 4)
 scatter!([10.0,20.0], [log.(10.0),interp_y_extra(20)])
 #Extrapolation works okay when close to actual gird, but can struggle far outside grid
 log(11)
@@ -113,21 +117,28 @@ plot(x_fine, y_fine)
 scatter!(x, y, markersize = 4)
 
 #Cubic Interpolation
-interp_y = cubic_spline_interpolation(x, y)
-y_fine_interp = interp_y.(x_fine)
-plot(x_fine, [y_fine, y_fine_interp])
+cubic_interp_y = cubic_spline_interpolation(x, y)
+y_fine_cubic = cubic_interp_y.(x_fine)
+plot(x_fine, [y_fine, y_fine_cubic])
 scatter!(x, y, markersize = 4)
 
 ###Extrapolation 
-interp_y = cubic_spline_interpolation(x, y, extrapolation_bc = Line())
+cubic_interp_y = cubic_spline_interpolation(x, y, extrapolation_bc = Line())
 log(12)
-interp_y(12)
+cubic_interp_y(12)
 
 #cubic_spline_interpolation does not support uneven grid in Interpolations.jl
 x_uneven = 0.1 .+ 10.0 .*collect(0.0:0.2:1.0).^2
 y_uneven = log.(x_uneven)
 interp_y = cubic_spline_interpolation(x_uneven, y_uneven) #Error because x is not evenly spaced. 
 
+
+# PCHIP
+using DataInterpolations
+
+pchip_y = PCHIPInterpolation(y, x, extrapolation=ExtrapolationType.Extension)
+x_wide = collect(0.05:0.01:19.0)
+plot(x_wide, [log.(x_wide), pchip_y.(x_wide), cubic_interp_y.(x_wide)], label=["True" "PCHIP" "Cubic Spline"])
 
 ################################################################################
 # Quadrature
@@ -226,7 +237,7 @@ function bellman(para, sols)
     kp_next = zero(kp)
 
     #Interpolate value function for continuation value
-    V_interp = linear_interpolation(k_grid, V, extrapolation_bc = Interpolations.Flat())
+    V_interp = linear_interpolation(k_grid, V)
 
     for (i_k, k) = enumerate(k_grid)
 
@@ -234,7 +245,11 @@ function bellman(para, sols)
 
         #Replace grid search with box constrained optimization!
         obj(kp) = -(log(budget-kp) + β*V_interp(kp))
-        opt = optimize(obj, 0.0, budget - 1e-8)
+        lo = minimum(k_grid)
+        # high = budget # problem: extrapolation. Extrapolation can introduce issues, we'll just truncate
+        high = min(budget, maximum(k_grid))
+        
+        opt = optimize(obj, lo, high)
 
         V_next[i_k] = -opt.minimum
         kp_next[i_k] = opt.minimizer
