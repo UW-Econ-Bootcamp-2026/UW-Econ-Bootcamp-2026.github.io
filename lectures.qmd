@@ -38,7 +38,10 @@ in Julia. Download the `.jl` files and follow along during class.
 ::: {.matlinks}
 [Slides (PDF)](lectures/lecture_three.pdf){target="_blank"}
 [Code-along](codealongs/CodeAlong3.jl)
-*Recording: link TBD*
+[Growth Problem (Recording)](https://uwmadison.zoom.us/rec/share/2COAzoiMezNs_YTqu2bPS21_6eyOWjq9DjveU_YRJTZFxZh3WfPuioLy11itRXIM.wtJ_UZQaM5xrcpf6?from=hub){target="_blank"}
+(Passcode: `=z6xunS#`)
+[Lecture 3 (Recording)](https://uwmadison.zoom.us/rec/share/7T-eCdQY9VamQcVoAtD0qC2z19_5E-tOvcHUaFYqfdClzPJZgJKA-fo8pW1BEdA3.dzRIki-U9tScsEsL?from=hub){target="_blank"}
+(Passcode: `R$8@!Q4H`)
 :::
 :::
 
