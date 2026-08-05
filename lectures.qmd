@@ -50,7 +50,8 @@ in Julia. Download the `.jl` files and follow along during class.
 ::: {.matlinks}
 [Slides (PDF)](lectures/lecture_four.pdf){target="_blank"}
 [Code-along](codealongs/CodeAlong4.jl)
-*Recording: link TBD*
+[Recording](https://uwmadison.zoom.us/rec/share/lxEUVoaOBn3OAuwnBVPRt5q6GxBqzGb-PnmdKlOQxB31qD9QTSYi2WGUhM9oq7Vu.XRUOteBOT2jpFI7W?from=hub){target="_blank"}
+(Passcode: `E#kf?04k`)
 :::
 :::
 
