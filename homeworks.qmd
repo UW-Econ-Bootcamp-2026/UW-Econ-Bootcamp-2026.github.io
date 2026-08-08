@@ -24,7 +24,6 @@ and submission instructions.
 :::
 :::
 
-<!-- WEEK 2 -- uncomment to release Homework 2
 ## Homework 2
 
 ::: {.week-card}
@@ -36,7 +35,6 @@ and submission instructions.
 [Solution: released after due date]{.due}
 :::
 :::
--->
 
 <!-- WEEK 3 -- uncomment to release Homework 3
 ## Homework 3

@@ -49,7 +49,7 @@ homeworks/*.pdf
 !lectures/lecture_four.pdf
 !codealongs/CodeAlong3.jl
 !codealongs/CodeAlong4.jl
-# !homeworks/homework2.pdf
+!homeworks/homework2.pdf
 # Week 3:
 # !lectures/lecture_five.pdf
 # !lectures/lecture_six.pdf
