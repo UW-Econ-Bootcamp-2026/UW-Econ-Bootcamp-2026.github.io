@@ -353,7 +353,6 @@ function bellman(para, sols)
 
     for (i_k, k) in enumerate(k_grid)
         max_util = -1e10
-        k = k_grid[i_k]
         budget = k^α + (1-δ)*k
         for (i_kp, kp) in enumerate(k_grid)
             

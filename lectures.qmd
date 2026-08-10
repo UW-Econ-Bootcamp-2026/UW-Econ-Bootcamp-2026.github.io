@@ -55,7 +55,6 @@ in Julia. Download the `.jl` files and follow along during class.
 :::
 :::
 
-<!-- WEEK 3 -- uncomment to release
 ## Week 3 — Parallelization and Dynamic Programming
 
 ::: {.week-card}
@@ -67,6 +66,7 @@ in Julia. Download the `.jl` files and follow along during class.
 :::
 :::
 
+<!-- Lecture 6 -- uncomment to release
 ::: {.week-card}
 ### Lecture 6 · Dynamic Programming and Value Function Iteration
 ::: {.matlinks}

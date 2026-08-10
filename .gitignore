@@ -51,9 +51,9 @@ homeworks/*.pdf
 !codealongs/CodeAlong4.jl
 !homeworks/homework2.pdf
 # Week 3:
-# !lectures/lecture_five.pdf
+!lectures/lecture_five.pdf
 # !lectures/lecture_six.pdf
-# !codealongs/CodeAlong5.jl
+!codealongs/CodeAlong5.jl
 # !codealongs/CodeAlong6.jl
 # !homeworks/homework3.pdf
 # !homeworks/data/lwage.csv
