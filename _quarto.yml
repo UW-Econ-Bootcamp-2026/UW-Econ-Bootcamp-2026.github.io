@@ -32,6 +32,7 @@ project:
     # - "codealongs/CodeAlong8_functions.jl"  # Week 4
     # - "codealongs/CodeAlong8_structs.jl"    # Week 4
     - "homeworks/homework1.pdf"
+    - "homeworks/solutions/homework1_solution.jl"  # released after due date
     - "homeworks/homework2.pdf"   # Week 2
     # - "homeworks/homework3.pdf"   # Week 3
     # - "homeworks/homework4.pdf"   # Week 4

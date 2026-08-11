@@ -22,10 +22,9 @@
 # uncomment its matching line in _quarto.yml.
 # ================================================================
 
-# Never publish: LaTeX source, the archive, solutions, later-week data, figures
+# Never publish: LaTeX source, the archive, later-week data, figures
 *.tex
 archive/
-homeworks/solutions/
 homeworks/data/
 lectures/figs/
 
@@ -42,6 +41,10 @@ codealongs/*.jl
 # Homeworks — hide all handouts, then allow released weeks only
 homeworks/*.pdf
 !homeworks/homework1.pdf
+
+# Homework solutions — hide all, then allow released (past-due) homeworks only
+homeworks/solutions/*
+!homeworks/solutions/homework1_solution.jl
 
 # ---- Weekly release checklist (uncomment as each week arrives) ----
 # Week 2:
