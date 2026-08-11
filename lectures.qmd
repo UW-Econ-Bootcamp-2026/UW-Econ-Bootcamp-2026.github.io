@@ -62,7 +62,7 @@ in Julia. Download the `.jl` files and follow along during class.
 ::: {.matlinks}
 [Slides (PDF)](lectures/lecture_five.pdf){target="_blank"}
 [Code-along](codealongs/CodeAlong5.jl)
-*Recording: link TBD*
+[Recording](https://drive.google.com/file/d/12WrVyKjfwTUcQz1zhyiVbbdbcxlBGivu/view?usp=drive_link){target="_blank"}
 :::
 :::
 
