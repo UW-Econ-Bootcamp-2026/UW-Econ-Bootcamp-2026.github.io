@@ -66,7 +66,6 @@ in Julia. Download the `.jl` files and follow along during class.
 :::
 :::
 
-<!-- Lecture 6 -- uncomment to release
 ::: {.week-card}
 ### Lecture 6 · Dynamic Programming and Value Function Iteration
 ::: {.matlinks}
@@ -75,7 +74,6 @@ in Julia. Download the `.jl` files and follow along during class.
 *Recording: link TBD*
 :::
 :::
--->
 
 <!-- WEEK 4 -- uncomment to release
 ## Week 4 — Simulation and Applications
