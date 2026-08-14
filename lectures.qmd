@@ -71,7 +71,8 @@ in Julia. Download the `.jl` files and follow along during class.
 ::: {.matlinks}
 [Slides (PDF)](lectures/lecture_six.pdf){target="_blank"}
 [Code-along](codealongs/CodeAlong6.jl)
-*Recording: link TBD*
+[Recording](https://uwmadison.zoom.us/rec/share/oGxL6smja3s8OUce5Ej7BeXMZW0Ym1rW9CaHG7uL_1-Rwe8wraFLIFxRZW8KMmES.y50y8--dSsxU8NB8?from=hub){target="_blank"}
+(Passcode: `y2@15Z+$`)
 :::
 :::
 
