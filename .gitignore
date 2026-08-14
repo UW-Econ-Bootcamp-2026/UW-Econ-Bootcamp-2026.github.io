@@ -58,8 +58,7 @@ homeworks/solutions/*
 !lectures/lecture_six.pdf
 !codealongs/CodeAlong5.jl
 !codealongs/CodeAlong6.jl
-# !homeworks/homework3.pdf
-# !homeworks/data/lwage.csv
+!homeworks/homework3.pdf
 # Week 4:
 # !lectures/lecture_seven.pdf
 # !lectures/lecture_eight.pdf
@@ -69,3 +68,4 @@ homeworks/solutions/*
 # !codealongs/CodeAlong8_structs.jl
 # !homeworks/homework4.pdf
 # !homeworks/data/data_moments.csv
+# !homeworks/data/lwage.csv   # moved from Week 3: HW4 Q1 uses it now

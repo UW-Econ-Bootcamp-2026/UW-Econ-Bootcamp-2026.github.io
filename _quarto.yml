@@ -34,10 +34,10 @@ project:
     - "homeworks/homework1.pdf"
     - "homeworks/solutions/homework1_solution.jl"  # released after due date
     - "homeworks/homework2.pdf"   # Week 2
-    # - "homeworks/homework3.pdf"   # Week 3
+    - "homeworks/homework3.pdf"   # Week 3
     # - "homeworks/homework4.pdf"   # Week 4
     - "homeworks/starter_code/slow_growth.jl"
-    # - "homeworks/data/lwage.csv"         # Week 3 (Homework 3)
+    # - "homeworks/data/lwage.csv"         # Week 4 (Homework 4 Q1)
     # - "homeworks/data/data_moments.csv"  # Week 4 (Homework 4)
     - "syllabus.pdf"
 
