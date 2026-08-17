@@ -76,11 +76,10 @@ in Julia. Download the `.jl` files and follow along during class.
 :::
 :::
 
-<!-- WEEK 4 -- uncomment to release
-## Week 4 — Simulation and Applications
+## Week 4 — Distributions, Equilibrium, and Estimation
 
 ::: {.week-card}
-### Lecture 7 · Simulation, AI Tools, and Best Practices
+### Lecture 7 · Distributions, Equilibrium, and AI Tools
 ::: {.matlinks}
 [Slides (PDF)](lectures/lecture_seven.pdf){target="_blank"}
 [Code-along](codealongs/CodeAlong7.jl)
@@ -88,8 +87,9 @@ in Julia. Download the `.jl` files and follow along during class.
 :::
 :::
 
+<!-- LECTURE 8 -- uncomment to release
 ::: {.week-card}
-### Lecture 8 · Economic Applications
+### Lecture 8 · Estimation
 ::: {.matlinks}
 [Slides (PDF)](lectures/lecture_eight.pdf){target="_blank"}
 [master.jl](codealongs/CodeAlong8_master.jl)

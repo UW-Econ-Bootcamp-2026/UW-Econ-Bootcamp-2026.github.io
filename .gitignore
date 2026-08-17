@@ -60,9 +60,9 @@ homeworks/solutions/*
 !codealongs/CodeAlong6.jl
 !homeworks/homework3.pdf
 # Week 4:
-# !lectures/lecture_seven.pdf
+!lectures/lecture_seven.pdf
 # !lectures/lecture_eight.pdf
-# !codealongs/CodeAlong7.jl
+!codealongs/CodeAlong7.jl
 # !codealongs/CodeAlong8_master.jl
 # !codealongs/CodeAlong8_functions.jl
 # !codealongs/CodeAlong8_structs.jl

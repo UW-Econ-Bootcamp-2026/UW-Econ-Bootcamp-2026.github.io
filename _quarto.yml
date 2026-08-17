@@ -19,7 +19,7 @@ project:
     - "lectures/lecture_four.pdf"    # Week 2
     - "lectures/lecture_five.pdf"    # Week 3
     - "lectures/lecture_six.pdf"     # Week 3
-    # - "lectures/lecture_seven.pdf"   # Week 4
+    - "lectures/lecture_seven.pdf"   # Week 4
     # - "lectures/lecture_eight.pdf"   # Week 4
     - "codealongs/CodeAlong1.jl"
     - "codealongs/CodeAlong2.jl"
@@ -27,7 +27,7 @@ project:
     - "codealongs/CodeAlong4.jl"            # Week 2
     - "codealongs/CodeAlong5.jl"            # Week 3
     - "codealongs/CodeAlong6.jl"            # Week 3
-    # - "codealongs/CodeAlong7.jl"            # Week 4
+    - "codealongs/CodeAlong7.jl"            # Week 4
     # - "codealongs/CodeAlong8_master.jl"     # Week 4
     # - "codealongs/CodeAlong8_functions.jl"  # Week 4
     # - "codealongs/CodeAlong8_structs.jl"    # Week 4
