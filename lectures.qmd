@@ -83,8 +83,10 @@ in Julia. Download the `.jl` files and follow along during class.
 ::: {.matlinks}
 [Slides (PDF)](lectures/lecture_seven.pdf){target="_blank"}
 [Code-along](codealongs/CodeAlong7.jl)
-*Recording: link TBD*
+[Recording](https://uwmadison.zoom.us/rec/share/3q2VNgAQHy12bpbYw51Kez0dogGpNEKe_8WqFTCYKbB_Eu0IjOV9L1FOPvKVBHnH.JRakobd4NndhGcfv?from=hub){target="_blank"}
+(Passcode: `Y7M.0tew`)
 :::
+[Note: screen-share wasn't recorded for the first part of this lecture — please follow along with the slides.]{.due}
 :::
 
 <!-- LECTURE 8 -- uncomment to release

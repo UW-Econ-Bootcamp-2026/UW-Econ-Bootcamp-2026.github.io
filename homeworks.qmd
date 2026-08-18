@@ -32,7 +32,7 @@ and submission instructions.
 
 ::: {.matlinks}
 [Problem set (PDF)](homeworks/homework2.pdf){target="_blank"}
-[Solution: released after due date]{.due}
+[Solution (Julia)](homeworks/solutions/homework2_solution.jl){target="_blank"}
 :::
 :::
 

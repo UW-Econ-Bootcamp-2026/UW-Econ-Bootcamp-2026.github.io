@@ -45,6 +45,7 @@ homeworks/*.pdf
 # Homework solutions — hide all, then allow released (past-due) homeworks only
 homeworks/solutions/*
 !homeworks/solutions/homework1_solution.jl
+!homeworks/solutions/homework2_solution.jl
 
 # ---- Weekly release checklist (uncomment as each week arrives) ----
 # Week 2:
