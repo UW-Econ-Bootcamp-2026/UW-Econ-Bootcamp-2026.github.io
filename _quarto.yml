@@ -20,7 +20,7 @@ project:
     - "lectures/lecture_five.pdf"    # Week 3
     - "lectures/lecture_six.pdf"     # Week 3
     - "lectures/lecture_seven.pdf"   # Week 4
-    # - "lectures/lecture_eight.pdf"   # Week 4
+    - "lectures/lecture_eight.pdf"   # Week 4
     - "codealongs/CodeAlong1.jl"
     - "codealongs/CodeAlong2.jl"
     - "codealongs/CodeAlong3.jl"            # Week 2
@@ -28,9 +28,9 @@ project:
     - "codealongs/CodeAlong5.jl"            # Week 3
     - "codealongs/CodeAlong6.jl"            # Week 3
     - "codealongs/CodeAlong7.jl"            # Week 4
-    # - "codealongs/CodeAlong8_master.jl"     # Week 4
-    # - "codealongs/CodeAlong8_functions.jl"  # Week 4
-    # - "codealongs/CodeAlong8_structs.jl"    # Week 4
+    - "codealongs/CodeAlong8.jl"            # Week 4
+    - "codealongs/data/wages.csv"           # Week 4 (CodeAlong8 reads it)
+    - "codealongs/data/make_wages.jl"       # Week 4 (regenerates wages.csv)
     - "homeworks/homework1.pdf"
     - "homeworks/solutions/homework1_solution.jl"  # released after due date
     - "homeworks/solutions/homework2_solution.jl"  # released after due date

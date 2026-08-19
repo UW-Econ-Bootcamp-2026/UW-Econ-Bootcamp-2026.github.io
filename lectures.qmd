@@ -89,15 +89,12 @@ in Julia. Download the `.jl` files and follow along during class.
 [Note: screen-share wasn't recorded for the first part of this lecture — please follow along with the slides.]{.due}
 :::
 
-<!-- LECTURE 8 -- uncomment to release
 ::: {.week-card}
 ### Lecture 8 · Estimation
 ::: {.matlinks}
 [Slides (PDF)](lectures/lecture_eight.pdf){target="_blank"}
-[master.jl](codealongs/CodeAlong8_master.jl)
-[functions.jl](codealongs/CodeAlong8_functions.jl)
-[structs.jl](codealongs/CodeAlong8_structs.jl)
+[Code-along](codealongs/CodeAlong8.jl)
+[wages.csv](codealongs/data/wages.csv)
 *Recording: link TBD*
 :::
 :::
--->

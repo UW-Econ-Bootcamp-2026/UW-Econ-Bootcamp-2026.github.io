@@ -16,16 +16,12 @@ open it in VS Code (or your editor of choice), and run it alongside the lecture.
 | 5 | Parallelization and UW Resources | [CodeAlong5.jl](codealongs/CodeAlong5.jl) |
 | 6 | Dynamic Programming | [CodeAlong6.jl](codealongs/CodeAlong6.jl) |
 | 7 | Distributions, Equilibrium, and AI Tools | [CodeAlong7.jl](codealongs/CodeAlong7.jl) |
+| 8 | Estimation | [CodeAlong8.jl](codealongs/CodeAlong8.jl) |
 
 : Code-along files {.striped .hover}
 
-<!-- LECTURE 8 -- uncomment row and move it back into the table above once Lecture 8 releases
-| 8 | Estimation | [master](codealongs/CodeAlong8_master.jl) · [functions](codealongs/CodeAlong8_functions.jl) · [structs](codealongs/CodeAlong8_structs.jl) |
--->
-
-<!-- WEEK 4 -- uncomment once Lecture 8 releases
 ::: {.callout-tip}
-Lecture 8 is split across three files. Run `CodeAlong8_master.jl`, which includes
-the `functions.jl` and `structs.jl` files.
+CodeAlong8 reads a dataset: download [wages.csv](codealongs/data/wages.csv) into a
+`data/` folder next to the script (or alongside it — the script looks in both).
+[make_wages.jl](codealongs/data/make_wages.jl) is the seeded script that generated it.
 :::
--->
