@@ -130,65 +130,76 @@ println("max |β̂_MLE - β̂_OLS| = ", maximum(abs.(θ_mle[1:3] .- b_ols)))
 # 4. GMM
 ################################################################################
 
-# MLE needed the whole distribution of the error. GMM needs only things the
-# model says are zero at the true parameter, E[g(w_i, θ₀)] = 0. Here that is
-# exogeneity, E[z_i (y_i - x_i'b)] = 0 -- but the machinery is identical for an
-# Euler equation, an IV restriction, or BLP's E[ξ_j z_j] = 0.
+# MLE needed the whole distribution of the error. GMM needs only a list of
+# things the model says average to zero, E[g(w_i, θ₀)] = 0: swap E for a sample
+# average and push it as close to zero as you can, θ̂ = argmin ḡ(θ)' W ḡ(θ).
+# Nowhere below do we assume e is normal, which is why the same machinery fits
+# an Euler equation or a BLP demand system, where no likelihood is available.
 
-moments(b, X, y, Z) = Z .* (y .- X * b)              # n × m, one row per worker
-gbar(b, X, y, Z)     = vec(mean(moments(b, X, y, Z), dims = 1))
-
-function gmm_obj(b, X, y, Z, W)
-    g = gbar(b, X, y, Z)
-    return dot(g, W * g)
+# Our model, lwage = b₀ + b₁·educ + b₂·exp + e with Var(e) = σ², has four
+# parameters and makes four claims about e. One COLUMN per moment, one ROW per
+# worker -- this is g(w_i, θ). Columns 5-6 wait until we over-identify.
+function moments(θ)
+    b, σ = θ[1:3], θ[4]
+    e = y .- X * b
+    return hcat(e,               # E[e]      = 0    the errors average out
+                e .* df.educ,    # E[e·educ] = 0    ...and say nothing about educ
+                e .* df.exp,     # E[e·exp]  = 0    ...or about exp
+                e .^ 2 .- σ^2,   # E[e²]     = σ²   ...and their spread IS σ
+                e .^ 3,          # E[e³]     = 0     } true only if
+                e .^ 4 .- 3σ^4)  # E[e⁴]     = 3σ⁴   } e is normal
 end
 
-function fit_gmm(X, y, Z, W; start = zeros(size(X, 2)))
-    res = optimize(b -> gmm_obj(b, X, y, Z, W), start, LBFGS())
-    b̂ = Optim.minimizer(res)
+gbar(θ, use) = vec(mean(moments(θ)[:, use], dims = 1))
 
-    # Sandwich variance: bread * meat * bread, with G = ∂ḡ/∂b'. Here g is
-    # linear in b, so G = -(1/n) Z'X exactly. GMM is only as hard as your
-    # model is. "Bread" is (G'WG)⁻¹, the same object you'd invert to solve
-    # the GMM first-order conditions if this were linear; "meat" is the
-    # G'WSWG in the middle that brings in the actual moment variance S.
-    n     = size(X, 1)
-    G     = -(Z' * X) ./ n
-    g     = moments(b̂, X, y, Z)
-    S     = (g' * g) ./ n                            # Var(√n ḡ), estimated at b̂
+# G = ∂ḡ/∂θ' has no closed form once the moments are nonlinear in θ. Difference
+# it, exactly like the Hessian in Section 3.
+function num_jacobian(f, x; h = 1e-5)
+    cols = map(eachindex(x)) do j
+        ej = zeros(length(x)); ej[j] = h
+        (f(x + ej) - f(x - ej)) / (2h)
+    end
+    return reduce(hcat, cols)
+end
+
+# `use` picks which moments to stack. Only σ² and σ⁴ ever appear above, so ±σ
+# fit equally well -- start σ positive and it stays there.
+function fit_gmm(use, W; start = [0.0, 0.0, 0.0, 1.0])
+    obj = θ -> (g = gbar(θ, use); dot(g, W * g))
+    θ̂  = Optim.minimizer(optimize(obj, start, LBFGS()))
+
+    # Sandwich variance: bread * meat * bread, where S carries the actual noise.
+    G     = num_jacobian(θ -> gbar(θ, use), θ̂)
+    gi    = moments(θ̂)[:, use]
+    S     = (gi' * gi) ./ n                       # Var(√n ḡ), estimated at θ̂
     bread = inv(G' * W * G)
-    meat  = G' * W * S * W * G
-    V     = bread * meat * bread ./ n
-    return b̂, sqrt.(diag(V)), S
+    V     = bread * (G' * W * S * W * G) * bread ./ n
+    return θ̂, sqrt.(diag(V)), S
 end
 
-# JUST-IDENTIFIED first: 3 moments, 3 parameters, Z = X. "The residual is
-# uncorrelated with the regressors" is the assumption OLS runs on, so this had
-# better reproduce OLS exactly -- and W had better be irrelevant, because with
-# as many equations as unknowns you can drive every moment to exactly zero.
-b_gmm, se_gmm, _ = fit_gmm(X, y, X, Matrix(1.0I, 3, 3))
-println("max |β̂_GMM - β̂_OLS| = ", maximum(abs.(b_gmm .- b_ols)))
+# JUST-IDENTIFIED: 4 moments, 4 parameters. You can drive every moment to
+# exactly zero, so W has nothing to trade off -- and "residuals uncorrelated
+# with the regressors" is what OLS assumes, so this had better reproduce OLS.
+θ_gmm, se_gmm, _ = fit_gmm(1:4, Matrix(1.0I, 4, 4))
+println("max |β̂_GMM - β̂_OLS| = ", maximum(abs.(θ_gmm[1:3] .- b_ols)))
+println("σ̂_GMM = ", θ_gmm[4], "   σ̂_MLE = ", θ_mle[4])
 
-b_alt, _, _ = fit_gmm(X, y, X, Matrix(100.0I, 3, 3))
-println("W scaled by 100:  max |Δβ̂| = ", maximum(abs.(b_alt .- b_gmm)))
+θ_alt, _, _ = fit_gmm(1:4, Matrix(100.0I, 4, 4))
+println("W scaled by 100:  max |Δθ̂| = ", maximum(abs.(θ_alt .- θ_gmm)))
 
-# OVER-IDENTIFIED: add moments. Under exogeneity ANY function of x is
-# uncorrelated with the error, so educ² and exp² are legitimate extra moment
-# conditions. Five equations, three unknowns -- they cannot all hold at once,
-# and now W decides which ones give.
-Z = [X df.educ .^ 2 df.exp .^ 2]
-b_I, se_I, S_I = fit_gmm(X, y, Z, Matrix(1.0I, 5, 5))
-
+# OVER-IDENTIFIED: columns 5-6 are the normality MLE assumed, added back a piece
+# at a time -- true, but not implied by the first four. Six equations, four
+# unknowns: they cannot all hold at once, and now W decides which ones give.
+θ_I, se_I, S_I = fit_gmm(1:6, Matrix(1.0I, 6, 6))
 
 # The efficient W is S⁻¹ -- down-weight the moments your data measure noisily --
-# but S has to be estimated at some b̂, and a good b̂ wanted W. Hence TWO-STEP.
-b_2s, se_2s, _ = fit_gmm(X, y, Z, inv(S_I); start = b_I)
-println("W = I vs two-step:  max |Δβ̂| = ", maximum(abs.(b_2s .- b_I)))
+# but S needs a θ̂ and a good θ̂ wanted W. Hence TWO-STEP.
+θ_2s, se_2s, _ = fit_gmm(1:6, inv(S_I); start = θ_I)
+println("W = I vs two-step:  max |Δθ̂| = ", maximum(abs.(θ_2s .- θ_I)))
+println("se(b₁):  W = I ", se_I[2], "   two-step ", se_2s[2])
 
-# Both are consistent; they differ because they weight the same five moments
-# differently. (Look at the scale of Z: educ² is in the hundreds, so W = I is a
-# claim about units, not economics.)
-
+# Both are consistent; two-step is tighter. Look at the scale of what you stack:
+# e is around 0.35, so e⁴ is around 0.015 -- W = I is a claim about units.
 
 
 ################################################################################
