@@ -95,6 +95,7 @@ in Julia. Download the `.jl` files and follow along during class.
 [Slides (PDF)](lectures/lecture_eight.pdf){target="_blank"}
 [Code-along](codealongs/CodeAlong8.jl)
 [wages.csv](codealongs/data/wages.csv)
-*Recording: link TBD*
+[Recording](https://uwmadison.zoom.us/rec/share/fQTvT3pv3OIhaYysdJhUxFAkjYbMNNzRvlOwnyONNmB4g3HhkdAXFA57-ot6BTuY.xHhwkEM0vXLHrmyg?from=hub){target="_blank"}
+(Passcode: `9ju^^6d^`)
 :::
 :::
