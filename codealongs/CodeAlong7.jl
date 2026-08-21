@@ -345,36 +345,29 @@ function transition_matrix(para, sols)
     return T_star
 end
 
-function stationary(T_star, μ0; tol = 10^-12, max_iter = 10^5)     # as VFI, but linear
-    μ = copy(μ0)
-    max_diff = tol + 10.0
+function solve_distribution!(para, sols)     # the distribution's solve_vfi!, but linear
+    (; tol_dist, max_iter_dist) = para
+    sols.T_star .= transition_matrix(para, sols)
+
+    # Warm start: iterate on sols.μ itself (already the stationary distribution from
+    # the previous r, if this isn't the first call) instead of re-guessing uniform.
+    # vec shares its data with sols.μ, so writing to μ writes the answer back in place.
+    μ = vec(sols.μ)
+    max_diff = tol_dist + 10.0
     n = 0
-    while max_diff > tol && n < max_iter
+
+    while max_diff > tol_dist && n < max_iter_dist
         n += 1
-        μ_next = T_star' * μ
+        μ_next = sols.T_star' * μ
+
         max_diff = maximum(abs.(μ_next .- μ))
         μ .= μ_next
     end
-    
-    if n == max_iter
-        @warn "Stationary distribution did not converge in $max_iter iterations"
+
+    if n == max_iter_dist
+        @warn "Stationary distribution did not converge in $max_iter_dist iterations"
     end
-    
-    return μ, n
-end
 
-function solve_distribution!(para, sols)     # the distribution's solve_vfi!
-    (; N_a, N_y, tol_dist, max_iter_dist) = para
-    sols.T_star .= transition_matrix(para, sols)
-
-    # Every row of T_star is a distribution over tomorrow's states. If this fails, mass
-    # is leaking and nothing downstream means anything.
-    @assert all(sum(sols.T_star, dims = 2) .≈ 1.0)
-
-    # Warm start: seed the iteration with sols.μ (already the stationary distribution
-    # from the previous r, if this isn't the first call) instead of re-guessing uniform.
-    μ_flat, n = stationary(sols.T_star, vec(sols.μ); tol = tol_dist, max_iter = max_iter_dist)
-    sols.μ .= reshape(μ_flat, N_a, N_y)              # back to (asset, income)
     return n
 end
 

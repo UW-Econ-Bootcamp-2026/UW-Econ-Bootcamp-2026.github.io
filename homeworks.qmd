@@ -48,11 +48,10 @@ and submission instructions.
 :::
 :::
 
-<!-- WEEK 4 -- uncomment to release Homework 4
 ## Homework 4
 
 ::: {.week-card}
-### HW 4 · Simulation and Applications
+### HW 4 · Heterogeneous Agents, Discrete Choice, and SMM
 [Due: Wednesday, August 26]{.due}
 
 ::: {.matlinks}
@@ -60,7 +59,6 @@ and submission instructions.
 [Solution: released after due date]{.due}
 :::
 :::
--->
 
 ## Starter code and data
 
@@ -71,15 +69,3 @@ reference:
 ::: {.matlinks}
 [slow_growth.jl](homeworks/starter_code/slow_growth.jl)
 :::
-
-<!-- WEEK 3 -- uncomment to release lwage.csv (used in Homework 3)
-::: {.matlinks}
-[lwage.csv](homeworks/data/lwage.csv)
-:::
--->
-
-<!-- WEEK 4 -- uncomment to release data_moments.csv (used in Homework 4)
-::: {.matlinks}
-[data_moments.csv](homeworks/data/data_moments.csv)
-:::
--->

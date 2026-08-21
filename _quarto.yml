@@ -36,10 +36,10 @@ project:
     - "homeworks/solutions/homework2_solution.jl"  # released after due date
     - "homeworks/homework2.pdf"   # Week 2
     - "homeworks/homework3.pdf"   # Week 3
-    # - "homeworks/homework4.pdf"   # Week 4
+    - "homeworks/homework4.pdf"   # Week 4
     - "homeworks/starter_code/slow_growth.jl"
-    # - "homeworks/data/lwage.csv"         # Week 4 (Homework 4 Q1)
-    # - "homeworks/data/data_moments.csv"  # Week 4 (Homework 4)
+    # HW4's data (choices.csv, hw4_wealth.csv) ships inside each student's
+    # private repo, not as a public download here — see .gitignore.
     - "syllabus.pdf"
 
 website:

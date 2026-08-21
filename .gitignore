@@ -27,6 +27,7 @@
 archive/
 homeworks/data/*
 lectures/figs/
+homeworks/*.md          # planning/design notes, never published
 
 # Lectures — hide all PDFs, then allow released weeks only
 lectures/*.pdf
@@ -69,6 +70,8 @@ homeworks/solutions/*
 # CodeAlong8 reads wages.csv; make_wages.jl regenerates it
 !codealongs/data/wages.csv
 !codealongs/data/make_wages.jl
-# !homeworks/homework4.pdf
-# !homeworks/data/data_moments.csv
-# !homeworks/data/lwage.csv   # moved from Week 3: HW4 Q1 uses it now
+!homeworks/homework4.pdf
+# HW4's data (choices.csv, hw4_wealth.csv) ships inside each student's private
+# hw4-<username> repo (from hw4-template), not as a public download — same as
+# HW1-3, none of which publish their data here either. Nothing under
+# homeworks/data/ needs un-ignoring for HW4.
